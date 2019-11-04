@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Início</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
   </head>
   <body>
     <div class="main"> 
@@ -42,24 +43,28 @@
         </tr>
       </table>
       
-      <form method="GET" action=""> <!-- Tag que define o formulário, o método e o arquivo que recebe os dados -->
+      <form method="GET" target="_blank"> <!-- Tag que define o formulário, o método e o arquivo que recebe os dados. O atributo target define se os dados submetidos serão enviados para uma nova aba, novo frame ou nova janela.-->
         <p>Nome:<input name="nome"></p> <!-- <input> é uma caixa de texto -->
         <p>Senha:<input type="password" name="senha"></p> <!-- password é uma senha -->
-        <p>Ocupação:</p>
-        <p><input type="checkbox" checked name="ocupação">Estudante</p> <!-- checkbox é uma caixa que pode ser selecionada pelo usuário, checked é um atributo que não requer valor -->
-        <p><input type="checkbox" name="ocupação">Desempregado</p>
-        <p><input type="checkbox" name="ocupação">Rainha gótica</p>
-        <p>Gênero:</p>
-        <p><input type="radio" name="genero">Masculino</p> <!-- semelhante ao checkbox, mas o usuário só pode escolher uma opção -->
-        <p><input type="radio" name="genero">Feminimo</p>
-        <p><input type="radio" name="genero">Outro</p>
-        <p>Escreva um <em>comentário</em>:<br><textarea rows="5" cols="25" name="texto">Comentários</textarea></p>
-        <select name="idade">
-          <option>10</option>
-          <option>20</option>
-          <option>30</option>
-          <option>40</option>
-        </select>
+        <fieldset> <!-- <fieldset> é usado para agrupar dados relacionados num formulário -->
+          <legend>Informações pessoais:</legend> <!-- Define uma legenda/título para o fieldset -->
+          <p>Ocupação:</p>
+          <p><input type="checkbox" checked name="ocupação">Estudante</p> <!-- checkbox é uma caixa que pode ser selecionada pelo usuário, checked é um atributo que não requer valor -->
+          <p><input type="checkbox" name="ocupação">Desempregado</p>
+          <p><input type="checkbox" name="ocupação">Rainha gótica</p>
+          <p>Gênero:</p>
+          <p><input type="radio" name="genero">Masculino</p> <!-- semelhante ao checkbox, mas o usuário só pode escolher uma opção -->
+          <p><input type="radio" name="genero">Feminimo</p>
+          <p><input type="radio" name="genero">Outro</p>
+          <p>Escreva um <em>comentário</em>:<br><textarea rows="5" cols="25" name="texto">Comentários</textarea></p>
+          <select name="idade">
+            <option>Selecione</option>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+          </select>
+        </fieldset>
         <p><input type="submit" name="enviar" value="Enviar"></p>
       </form>
     </div>
