@@ -2,3 +2,9 @@ body {
   background-color: rgb(60, 0, 116);
   color: white;
 }
+
+.main {
+  max-width: 650px;
+  border: 0;
+  margin: auto;
+}
